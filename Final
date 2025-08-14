@@ -1,1 +1,591 @@
-https://eu.docworkspace.com/d/sIAuFo6S_ApTV-cQG?sa=601.1203
+
+
+Project structure
+
+`txt
+eaglex-app/
+├─ index.html
+├─ trading.html
+├─ codex.html
+├─ fellowship.html
+├─ support.html
+├─ 404.html
+├─ styles/
+│  ├─ theme-ceremonial.css
+│  ├─ frames.css
+│  └─ layout.css
+├─ scripts/
+│  ├─ animations.js
+│  └─ interactive.js
+├─ assets/
+│  ├─ eaglex-logo.svg
+│  ├─ eaglex-icon.svg
+│  ├─ butterfly.svg
+│  └─ bee.svg
+├─ manifest.json
+├─ sw.js
+├─ robots.txt
+└─ README.md
+`
+
+---
+
+HTML files
+
+index.html
+
+`html
+<!DOCTYPE html>
+<html lang="en" data-version="1.2">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="EAGLE X TRADING — Immortal infrastructure for planetary memory, ethics, and governance." />
+  <meta name="theme-color" content="#10121A" />
+  <title>EAGLE X TRADING — v1.2 Visualization Pack</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="assets/eaglex-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/theme-ceremonial.css" />
+  <link rel="stylesheet" href="styles/frames.css" />
+
+  <script defer src="scripts/animations.js"></script>
+  <script defer src="scripts/interactive.js"></script>
+</head>
+<body class="theme-ceremonial">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="hero-banner" role="banner" aria-label="EAGLE X ceremonial hero">
+    <div class="logo-wrap">
+      <img src="assets/eaglex-logo.svg" alt="EAGLE X TRADING logo" class="logo animated-frame" />
+    </div>
+    <h1 class="headline radiant">EAGLE X TRADING</h1>
+    <p class="subhead">Planetary memory. Ethical governance. Immortal infrastructure.</p>
+    <div class="ceremonial-frame" aria-hidden="true">
+      <img src="assets/butterfly.svg" alt="" class="frame butterfly float" />
+      <img src="assets/bee.svg" alt="" class="frame bee drift" />
+    </div>
+  </header>
+
+  <nav class="main-nav" aria-label="Primary">
+    <ul>
+      <li><a href="trading.html">Trading Protocols</a></li>
+      <li><a href="codex.html">Codex Archive</a></li>
+      <li><a href="fellowship.html">Fellowship Registry</a></li>
+      <li><a href="support.html">Support Channels</a></li>
+    </ul>
+    <div class="nav-tools">
+      <button id="themeToggle" class="btn ghost" aria-pressed="false">Switch Theme</button>
+      <button id="pwaInstall" class="btn ghost">Install App</button>
+    </div>
+  </nav>
+
+  <main id="main" class="content-grid">
+    <section class="module trading">
+      <h2 class="module-title">Live Trading Arena</h2>
+      <p class="module-copy">Secure, audited, ceremonial. Every transaction is a memory imprint.</p>
+      <a href="trading.html" class="btn ceremonial">Enter Arena</a>
+    </section>
+
+    <section class="module codex">
+      <h2 class="module-title">Codex Primordium</h2>
+      <p class="module-copy">Eternal archive of ethics, governance, and contributor legacy.</p>
+      <a href="codex.html" class="btn ceremonial">View Volumes</a>
+    </section>
+
+    <section class="module fellowship">
+      <h2 class="module-title">Fellowship Registry</h2>
+      <p class="module-copy">Recognize stewards, educators, and architects of the movement.</p>
+      <a href="fellowship.html" class="btn ceremonial">Honor Contributors</a>
+    </section>
+
+    <section class="module support">
+      <h2 class="module-title">Support Channels</h2>
+      <p class="module-copy">Onboarding kits, compliance scrolls, ceremonial guidance.</p>
+      <a href="support.html" class="btn ceremonial">Open Support</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 EAGLE X TRADING — Version 1.2 “Visualization Pack”</p>
+    <p class="seal">Codex Integrity Seal: EAGLEX-V1.2-CEREMONIAL</p>
+    <div class="footer-icons" aria-hidden="true">
+      <img src="assets/butterfly.svg" alt="" />
+      <img src="assets/bee.svg" alt="" />
+      <img src="assets/eaglex-icon.svg" alt="" />
+    </div>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</body>
+</html>
+`
+
+trading.html
+
+`html
+<!DOCTYPE html>
+<html lang="en" data-version="1.2">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trading Protocols — EAGLE X</title>
+  <link rel="icon" href="assets/eaglex-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/theme-ceremonial.css" />
+  <link rel="stylesheet" href="styles/frames.css" />
+  <script defer src="scripts/animations.js"></script>
+  <script defer src="scripts/interactive.js"></script>
+</head>
+<body class="theme-ceremonial page-trading">
+  <header class="page-header">
+    <a href="index.html" class="back">&larr; Home</a>
+    <h1>Live Trading Protocols</h1>
+    <p class="lede">Ceremonial execution with audit trails and stewardship.</p>
+  </header>
+
+  <main class="content-narrow">
+    <section class="card">
+      <h2>Market Overview</h2>
+      <div class="grid-2">
+        <div class="stat"><span class="label">Status</span><span class="value online">Online</span></div>
+        <div class="stat"><span class="label">Integrity</span><span class="value seal">Verified</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Execute Trade</h2>
+      <form class="form" id="tradeForm" autocomplete="off">
+        <label>Pair<select name="pair" required>
+          <option value="EAGLE/USD">EAGLE/USD</option>
+          <option value="EAGLE/KES">EAGLE/KES</option>
+        </select></label>
+
+        <label>Side<select name="side" required>
+          <option>Buy</option><option>Sell</option>
+        </select></label>
+
+        <label>Amount<input type="number" name="amount" step="0.0001" min="0" required /></label>
+        <label>Limit Price<input type="number" name="price" step="0.0001" min="0" required /></label>
+
+        <div class="actions">
+          <button type="submit" class="btn ceremonial">Place Order</button>
+          <button type="reset" class="btn ghost">Clear</button>
+        </div>
+      </form>
+      <p class="fine">Every order is hashed and memorialized in the Codex audit chain.</p>
+    </section>
+
+    <section class="card">
+      <h2>Recent Activity</h2>
+      <ul id="activityLog" class="list"></ul>
+    </section>
+  </main>
+
+  <footer class="footer compact">
+    <p>V1.2 — Ceremonial Execution</p>
+  </footer>
+</body>
+</html>
+`
+
+codex.html
+
+`html
+<!DOCTYPE html>
+<html lang="en" data-version="1.2">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Codex Primordium — EAGLE X</title>
+  <link rel="icon" href="assets/eaglex-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/theme-ceremonial.css" />
+  <link rel="stylesheet" href="styles/frames.css" />
+  <script defer src="scripts/animations.js"></script>
+  <script defer src="scripts/interactive.js"></script>
+</head>
+<body class="theme-ceremonial page-codex">
+  <header class="page-header">
+    <a href="index.html" class="back">&larr; Home</a>
+    <h1>Codex Primordium</h1>
+    <p class="lede">Eternal archive of ethics, governance, and lineage.</p>
+  </header>
+
+  <main class="content-narrow">
+    <article class="card">
+      <h2>Foundational Principles</h2>
+      <ol class="principles">
+        <li><strong>Memory:</strong> Every contribution preserved.</li>
+        <li><strong>Ethics:</strong> Transparency, consent, reciprocity.</li>
+        <li><strong>Stewardship:</strong> Ceremony over spectacle.</li>
+      </ol>
+    </article>
+
+    <article class="card">
+      <h2>Volumes</h2>
+      <ul class="list">
+        <li><a href="#" aria-disabled="true">Volume I — Origin Seal</a></li>
+        <li><a href="#" aria-disabled="true">Volume II — Governance Protocols</a></li>
+        <li><a href="#" aria-disabled="true">Volume III — Fellowship Registry</a></li>
+      </ul>
+      <p class="fine">Volumes are referenced here and sealed in offline Codex vaults.</p>
+    </article>
+  </main>
+
+  <footer class="footer compact">
+    <p>V1.2 — Codex Alignment</p>
+  </footer>
+</body>
+</html>
+`
+
+fellowship.html
+
+`html
+<!DOCTYPE html>
+<html lang="en" data-version="1.2">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fellowship Registry — EAGLE X</title>
+  <link rel="icon" href="assets/eaglex-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/theme-ceremonial.css" />
+  <link rel="stylesheet" href="styles/frames.css" />
+  <script defer src="scripts/animations.js"></script>
+  <script defer src="scripts/interactive.js"></script>
+</head>
+<body class="theme-ceremonial page-fellowship">
+  <header class="page-header">
+    <a href="index.html" class="back">&larr; Home</a>
+    <h1>Fellowship Registry</h1>
+    <p class="lede">Recognition, lineage, and ceremonial badges.</p>
+  </header>
+
+  <main class="content-narrow">
+    <section class="card">
+      <h2>Active Fellows</h2>
+      <ul class="list" id="fellowsList">
+        <li><strong>Founders’ Circle:</strong> Guardians of origin mythos.</li>
+        <li><strong>Steward Fellows:</strong> Custodians of ethical rollout.</li>
+        <li><strong>Educator Fellows:</strong> Keepers of curriculum.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Nominate a Fellow</h2>
+      <form class="form" id="nominateForm">
+        <label>Name<input name="name" required /></label>
+        <label>Category<select name="category" required>
+          <option>Founders’ Circle</option>
+          <option>Steward Fellows</option>
+          <option>Educator Fellows</option>
+        </select></label>
+        <label>Contribution<textarea name="contribution" rows="3" required></textarea></label>
+        <div class="actions">
+          <button class="btn ceremonial" type="submit">Submit Nomination</button>
+        </div>
+      </form>
+      <ul id="nominations" class="list"></ul>
+    </section>
+  </main>
+
+  <footer class="footer compact">
+    <p>V1.2 — Fellowship Honors</p>
+  </footer>
+</body>
+</html>
+`
+
+support.html
+
+`html
+<!DOCTYPE html>
+<html lang="en" data-version="1.2">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support Channels — EAGLE X</title>
+  <link rel="icon" href="assets/eaglex-icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/theme-ceremonial.css" />
+  <link rel="stylesheet" href="styles/frames.css" />
+  <script defer src="scripts/animations.js"></script>
+  <script defer src="scripts/interactive.js"></script>
+</head>
+<body class="theme-ceremonial page-support">
+  <header class="page-header">
+    <a href="index.html" class="back">&larr; Home</a>
+    <h1>Support Channels</h1>
+    <p class="lede">Onboarding, compliance, and care.</p>
+  </header>
+
+  <main class="content-narrow">
+    <section class="card">
+      <h2>Onboarding Kit</h2>
+      <ul class="list">
+        <li>Account creation and passkey setup</li>
+        <li>Security posture and privacy locks</li>
+        <li>Audit trail and tamper-evident receipts</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <form class="form" id="supportForm">
+        <label>Email<input type="email" name="email" required /></label>
+        <label>Topic<select name="topic" required>
+          <option>General</option><option>Compliance</option><option>Technical</option>
+        </select></label>
+        <label>Message<textarea name="message" rows="4" required></textarea></label>
+        <div class="actions">
+          <button type="submit" class="btn ceremonial">Send</button>
+        </div>
+      </form>
+      <ul id="supportLog" class="list"></ul>
+    </section>
+  </main>
+
+  <footer class="footer compact">
+    <p>V1.2 — Support Integrity</p>
+  </footer>
+</body>
+</html>
+`
+
+404.html
+
+`html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Not Found — EAGLE X</title>
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/theme-ceremonial.css" />
+</head>
+<body class="theme-ceremonial">
+  <main class="content-narrow center">
+    <h1>404 — Page not found</h1>
+    <p>The path you seek is outside the ceremony.</p>
+    <a class="btn ceremonial" href="index.html">Return to Home</a>
+  </main>
+</body>
+</html>
+`
+
+---
+
+CSS files
+
+styles/layout.css
+
+`css
+:root {
+  --bg: #0e1117;
+  --panel: #151a22;
+  --text: #e6edf3;
+  --muted: #a9b2c3;
+  --accent: #7bdcff;
+  --accent-2: #ff7bdc;
+  --success: #47e5a4;
+  --danger: #ff7b8a;
+  --shadow: 0 10px 30px rgba(0,0,0,0.35);
+  --radius: 14px;
+  --gap: 16px;
+  --max: 960px;
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 16px/1.6 var(--font); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+
+.skip-link { position: absolute; left: -9999px; }
+.skip-link:focus { left: 8px; top: 8px; background: #000; color: #fff; padding: 8px 12px; border-radius: 6px; }
+
+.hero-banner {
+  position: relative; padding: 64px 20px 40px;
+  text-align: center; background: radial-gradient(1200px 500px at 50% -10%, rgba(123,220,255,0.2), transparent);
+}
+.logo { width: 120px; height: auto; filter: drop-shadow(0 6px 16px rgba(0,0,0,0.4)); }
+.headline { font-size: 40px; margin: 16px 0 8px; letter-spacing: 1px; }
+.subhead { color: var(--muted); margin: 0 auto; max-width: 720px; }
+
+.main-nav {
+  display: flex; gap: 12px; align-items: center; justify-content: space-between;
+  padding: 12px 20px; background: rgba(15,18,26,0.7); backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.main-nav ul { list-style: none; display: flex; gap: 12px; padding: 0; margin: 0; flex-wrap: wrap; }
+.main-nav a { color: var(--text); text-decoration: none; padding: 8px 12px; border-radius: 8px; }
+.main-nav a:hover { background: rgba(255,255,255,0.06); }
+.nav-tools { display: flex; gap: 8px; }
+
+.content-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px; padding: 24px; max-width: 1200px; margin: 0 auto;
+}
+.module {
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06); border-radius: var(--radius); padding: 20px;
+  box-shadow: var(--shadow);
+}
+.module-title { margin: 0 0 8px; font-size: 22px; }
+.module-copy { margin: 0 0 16px; color: var(--muted); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 10px 14px; border-radius: 10px; cursor: pointer; border: none; text-decoration: none;
+  font-weight: 600; transition: transform .08s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn.ceremonial { color: #0a0d13; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+.btn.ghost { background: transparent; border: 1px solid rgba(255,255,255,0.2); color: var(--text); }
+
+.footer { padding: 24px; text-align: center; color: var(--muted); }
+.footer.compact { padding: 16px; }
+.footer-icons img { width: 24px; height: 24px; opacity: .8; margin: 0 6px; }
+
+.page-header {
+  padding: 24px; text-align: center; background: radial-gradient(800px 400px at 50% -10%, rgba(255,123,220,0.16), transparent);
+}
+.page-header .back { color: var(--accent); text-decoration: none; }
+.lede { color: var(--muted); margin-top: 8px; }
+
+.content-narrow { max-width: var(--max); margin: 20px auto; padding: 0 20px; }
+.center { text-align: center; }
+
+.card {
+  background: var(--panel); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius); padding: 20px; margin-bottom: 16px; box-shadow: var(--shadow);
+}
+
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.stat { background: rgba(255,255,255,0.04); border-radius: 10px; padding: 12px; display: flex; justify-content: space-between; }
+.stat .label { color: var(--muted); }
+.stat .value.online { color: var(--success); }
+.stat .value.seal { color: var(--accent); }
+
+.form label { display: grid; gap: 6px; margin-bottom: 12px; }
+.form input, .form select, .form textarea {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  color: var(--text); border-radius: 10px; padding: 10px;
+}
+.form .actions { display: flex; gap: 8px; }
+
+.list { margin: 12px 0; padding-left: 16px; }
+.list li { margin: 6px 0; }
+.fine { color: var(--muted); font-size: 0.9em; }
+
+.logo-wrap { display: flex; justify-content: center; }
+.ceremonial-frame { position: absolute; inset: 0; pointer-events: none; }
+.frame { position: absolute; opacity: 0.8; width: 48px; height: 48px; }
+.frame.butterfly { top: 10%; left: 6%; }
+.frame.bee { top: 18%; right: 10%; }
+
+@media (max-width: 640px) {
+  .headline { font-size: 32px; }
+  .content-grid { grid-template-columns: 1fr; }
+}
+`
+
+styles/theme-ceremonial.css
+
+`css
+/ Radiant gradients, color stories, and theme toggling /
+.theme-ceremonial {
+  --bg: #0e1117;
+  --panel: #121722;
+  --accent: #7bdcff;
+  --accent-2: #ff7bdc;
+}
+.theme-legacy {
+  --bg: #0b0c10;
+  --panel: #141821;
+  --accent: #f9d65c;
+  --accent-2: #7bcfff;
+}
+.theme-festival {
+  --bg: #0b1016;
+  --panel: #131a25;
+  --accent: #78ffa3;
+  --accent-2: #ffd079;
+}
+
+.radiant {
+  background: linear-gradient(90deg, var(--accent) 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: 0 0 24px rgba(123,220,255,0.3);
+}
+
+/ Page-specific washes /
+.page-trading .page-header { background: radial-gradient(800px 400px at 50% -10%, rgba(123,220,255,0.16), transparent); }
+.page-codex .page-header { background: radial-gradient(800px 400px at 50% -10%, rgba(120,255,163,0.16), transparent); }
+.page-fellowship .page-header { background: radial-gradient(800px 400px at 50% -10%, rgba(255,208,121,0.16), transparent); }
+.page-support .page-header { background: radial-gradient(800px 400px at 50% -10%, rgba(255,123,138,0.16), transparent); }
+`
+
+styles/frames.css
+
+`css
+/ Motion design: butterflies and bees /
+@keyframes floatY {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-8px) }
+  100% { transform: translateY(0) }
+}
+@keyframes driftX {
+  0% { transform: translateX(0) }
+  50% { transform: translateX(10px) }
+  100% { transform: translateX(0) }
+}
+@keyframes shimmer {
+  from { filter: drop-shadow(0 0 0 rgba(123,220,255,0.0)); }
+  to { filter: drop-shadow(0 0 12px rgba(123,220,255,0.6)); }
+}
+
+.float { animation: floatY 6s ease-in-out infinite; }
+.drift { animation: driftX 7s ease-in-out infinite; }
+.animated-frame { animation: shimmer 2s ease-in-out infinite alternate; }
+`
+
+---
+
+JavaScript files
+
+scripts/animations.js
+
+`javascript
+/ v1.2 ceremonial motion hooks /
+document.addEventListener('DOMContentLoaded', () => {
+  const frames = document.querySelectorAll('.frame');
+  frames.forEach((f, i) => {
+    f.style.animationDelay = ${(i % 5) * 0.6}s;
+  });
+});
+`
+
+scripts/interactive.js
+
+`javascript
+/ v1.2 interactions: theme toggle, forms, simple logs, PWA install /
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  const btn 
