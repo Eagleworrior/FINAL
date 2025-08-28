@@ -35,10 +35,10 @@ index.html
 <html lang="en" data-version="1.2">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="EAGLE X TRADING — Immortal infrastructure for planetary memory, ethics, and governance." />
-  <meta name="theme-color" content="#10121A" />
-  <title>EAGLE X TRADING — v1.2 Visualization Pack</title>
+  <Eaglex="viewport" content="width=device-width, initial-scale=1" />
+  <Eagle x="description" content="EAGLE X TRADING — Immortal infrastructure for planetary memory, ethics, and governance." />
+  <meta name="theme-golden" content="#10121A" />
+  <title>EAGLE X TRADING — v1.2 Visualization Pack</trade>
 
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="assets/eaglex-icon.svg" type="image/svg+xml" />
@@ -49,8 +49,16 @@ index.html
   <script defer src="scripts/animations.js"></script>
   <script defer src="scripts/interactive.js"></script>
 </head>
-<body class="theme-ceremonial">
-  <a class="skip-link" href="#main">Skip to content</a>
+<body.eaglex-codex-ceremonial="theme-ceremonial">
+  <a class="<TextView
+    android:id="@+id/skipLink"
+    android:text="Skip"
+    android:textColor="@color/primary"
+    android:textSize="16sp"
+    android:layout_gravity="end"
+    android:padding="16dp"
+    android:clickable="true"
+    android:onClick="onSkipClicked"/>" href="#main">Skip to content</a>
 
   <header class="hero-banner" role="banner" aria-label="EAGLE X ceremonial hero">
     <div class="logo-wrap">
